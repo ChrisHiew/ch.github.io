@@ -1,0 +1,53 @@
+<breakfast_menu>
+     <food>
+     <name>Plain Pancakes</name>
+     <price>$3.00</price>
+     <description>With butter and maple syrup.</description>
+     </food>
+     <food>
+     <name>Banana Walnut Pancakes</name>
+     <price>$6.50</price>
+     <description>Topped with banana slices and toasted walnuts.</description>
+     </food>
+     <food>
+     <name>Fresh Fruit Pancakes</name>
+     <price>$10.00</price>
+     <description>With fresh fruit topping(a choice of banana/pineapple/mango). </description>
+     </food>
+     <food>
+     <name>BlueBerry Pancakes</name>
+     <price>$12.00</price>
+     <description>With whipped cream,blueberries and maple syrup.</description>
+      </food>
+     <food>
+     <name>BlueBerry Cream Cheese</name>
+     <price>$15.50</price>
+     <description>Pancakes topped with blueberry jam,cream,cheese and maple syrup.</description>
+     </food>
+     <food>
+      <name>French Toast</name>
+     <price>$17.00</price>
+     <description>Pan-toasted bread mixed with cinnamon powder,fresh milk,fresh egg, pan-fried and dusted with powedered sugar</description>
+     </food>
+
+     <food>
+     <name>American Style Omelette</name>
+     <price>$20.00</price>
+     <description>With your two eggs,a choice of ( bacon/sausage/ham/corned/beef),toasted bread,chilled juice or coffee.</description>
+     </food>
+     <food>
+     <name>American Style Omelette</name>
+     <price>$22.00</price>
+     <description>With your choice of filling (Veggie/Ham,Cheese/Sausage,Pepper)served with toastef bread</description>
+     </food>
+     <food>
+     <name>Cebuano Breakfast</name>
+     <price>$25.00</price>
+     <description>Served with two eggs, a choice of (longganisa / tinabal / tonico / chorizo / buwad bulinaw / buwad danggit / bangus), rice and achara, chilled juice or coffee or sikwate (native chocolate) </description>
+     </food>
+     <food>
+     <name>Tapsilog</name>
+     <price>$30.00</price>
+     <description>Served with two eggs, beef tapa, garlic rice,chilled juice or coffee or sikwate (native chocolate)</description>
+     </food>
+     </breakfast_menu>

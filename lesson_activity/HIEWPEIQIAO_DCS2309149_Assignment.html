@@ -1,0 +1,77 @@
+<html>
+<style>
+  
+table,th,td {
+  border : 3px solid rgb(227, 174, 236);
+  border-collapse: collapse;
+  background: #b8adff;
+  font-style: italic;
+  margin-left: auto;  
+  margin-right: auto;
+  
+  
+}
+th,td{
+  padding: 10px;
+  
+}
+button {
+  justify-content: center;
+  background-color:#a4d7e7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: middle;
+}
+body {
+  color: white;
+  background-color: black;
+}
+
+
+</style>
+<body>
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<button type="button"  onclick="loadXMLDoc()" >Breakfast Menu</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET","HiewPeiQiao_DCS2309149_xml.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) 
+{ 
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Name</th><th>Price</th> <th>Description</th></tr>";
+  var x = xmlDoc.getElementsByTagName("food");
+  for (i = 0; i <x.length; i++) 
+  { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +"<td>" +
+    x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +"</td></td><td>"+
+    x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +"</tr></tr></td></td>" ;
+    
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
