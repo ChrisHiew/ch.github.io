@@ -1,0 +1,11 @@
+body 
+          { font-size:100%;}
+h4
+          {color:rgb(169, 237, 174);
+          padding:25px;background:rgb(39, 29, 29);
+          width:fit-content;
+          font-size:150%;}
+
+          font{font-weight:bold;}
+          p.special{line-height:150%;
+          border-style:double;}
