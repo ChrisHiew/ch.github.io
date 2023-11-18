@@ -1,0 +1,1 @@
+alert("Living Room - Cabinet");

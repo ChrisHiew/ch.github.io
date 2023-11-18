@@ -1,0 +1,1 @@
+alert("Dining Table - Dining Table");
