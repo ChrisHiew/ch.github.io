@@ -1,0 +1,179 @@
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width:100%;
+ 
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 100px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Tahoma';
+}
+
+.topnav a:hover {
+  background-color: rgb(206, 230, 231);
+  color: black;
+  
+}
+
+/* home */
+.topnav a.active {
+  background-color: rgb(206, 184, 151);
+  color: white;
+}
+.dropdown {
+  
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbutton {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Tahoma';
+  
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(193, 180, 198);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:  rgb(206, 230, 231);
+}
+
+.dropdown:hover .dropdown-content {
+  display:block;
+}
+
+.card {
+  box-shadow: 0 5px 8px 0 rgba(66, 255, 239, 0.767);
+  max-width: 300px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: rgb(181, 133, 133);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  background-color: rgb(21, 20, 20);
+  opacity: 0.90;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+
+#rightbox
+{
+width: 100%;
+height: 255px;
+background:rgb(182, 175, 176);
+position: bottom;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 75%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 50%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 15%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 1%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 0%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px)
+ {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+  
