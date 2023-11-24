@@ -1,0 +1,213 @@
+<html>
+    <head>
+    <title>Form</title>
+    <link rel=stylesheet href=table.css>
+    <link rel=icon href=stitch.jpeg type=image/png>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+</head>
+<script>
+     function validateForm()
+     {
+          //to validate text - do not allow empty
+          let x = document.MyFirstForm.fname.value;
+          if(x =="")
+          {
+               alert("Please provide your First Name!");
+               return false;
+          }
+          //to validate text - only allow alphabet characters
+          let y = document.MyFirstForm.lname.value;
+          var letters=/^[A-Za-z]/;
+          if(!y.match(letters))
+          {
+               alert("Please input alphabet characters for Last Name.");
+               return false;
+          }
+          
+
+          var z = document.forms["MyFirstForm"]["num"].value;
+          if(!/^[0-9]+$/.test(z)){
+          alert("Please only enter numeric characters only for your Password! (Allowed input:0-9)")
+          }
+
+
+          // third
+          if((MyFirstForm.gender[0].checked == false) && (MyFirstForm.gender[1].checked == false))
+          {
+               alert("Please choose Gender : Male or Female");
+               return false;
+          }
+
+          //to validate checkbox - must tick
+          var group =  document.MyFirstForm.fav_sub;
+          for(var i =0; i<group.length;i++)
+          {
+               if (group [i].checked)
+               {
+                    return false;
+               }
+          }
+          if (i == group.length)
+          {
+               alert("No Checkbox is checked");
+               return false;
+          }
+
+          
+          
+          
+     }
+</script>
+<script>
+          function mouseDown() 
+          {
+          document.getElementById("myP").style.color = "yellow";
+          }
+          function mouseUp() 
+          {
+          document.getElementById("myP").style.color = "purple";
+          }   
+          onload =function(){ 
+          var ele = document.querySelectorAll('.password')[0];
+          ele.onkeypress = function(e) {
+          if(isNaN(this.value+""+String.fromCharCode(e.charCode)))
+          return false;
+          }
+          ele.onpaste = function(e){
+          e.preventDefault();
+          }
+          } 
+</script>
+
+
+<body topmargin=5 >
+<script>
+          function fnCalculateAge()
+          {
+          
+          var userDateinput = document.getElementById("dob").value;  
+          console.log(userDateinput);
+                
+          // convert user input value into date object
+          var birthDate = new Date(userDateinput);
+          console.log(" birthDate"+ birthDate);
+                
+          // get difference from current date;
+          var difference=Date.now() - birthDate.getTime(); 
+                      
+          var  ageDate = new Date(difference); 
+          var calculatedAge=   Math.abs(ageDate.getUTCFullYear() - 1970);
+          alert(calculatedAge);
+          }
+          
+</script>
+
+     <!-- click on it  -->
+     <h2 align = center id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+          (Click Here)Personal details:</h2>
+    
+<center>
+     <!-- this -->
+     <form name=MyFirstForm onsubmit="return validateForm()">
+          <p style ="background-color:powderblue; 
+          font-family:Tahoma;
+          font-size:100%;
+          text-align:center;
+          width:100%;
+          height:100%;">
+
+<table >
+     <tr>
+          
+     <th >First Name:</th>
+     <!-- and this -->
+     <td ><input type=text name=fname value="Name"size="50" maxlength="10"></td>
+     
+     </tr>
+     
+     <tr>
+     <th>Last Name:</th>
+     <td><input type=text name=lname></td>  
+     </tr>
+
+     <tr>
+     <th>Gender:</th>
+     <td><input type = radio name = gender value = Male>Male
+          <input type = radio name = gender value = Female>Female</td>
+     </tr>
+
+     <tr>
+     <th>Choose your favorite subject:</th>
+     <td><input type = checkbox name = fav_sub value = DCS4103>DCS4103
+          <input type = checkbox name = fav_sub value = DCS3003>DCS3003
+          <input type = checkbox name = fav_sub value = MST1003>MST1003
+          <input type = checkbox name = fav_sub value = MST2003>MST2003</td>
+     </tr>
+
+     <tr>
+     <th>Address:</th>
+     <td><textarea rows=4 cols=30 name=address></textarea>
+     </tr>
+     
+     <tr>
+     <th>Date of birth:</th>
+     <!-- calculatedAge -->
+     <td><input type="date" id="dob"><br><br><br><button id="btnCalculate"  onclick="fnCalculateAge();" >Calculate Age</button> 
+     </td>
+     </tr>
+     <tr>
+          <th>Email address:</th>
+          <!-- 6 -->
+          <!-- email placeholder -->
+          <td><input type="email" placeholder=".....@example.com" />
+          </td>
+          </tr>
+     
+     <tr>
+     <th>Login password:</th>
+     <!-- 5 -->
+<!-- (mouse over / only can input number) -->
+     <td>
+          <p title="Please only enter numeric characters only for your Age! (Allowed input:0-9)">
+          <input class="password" type=text name=loginpass minlegth="4" maxlength="4"></p><br></td>
+     </tr>
+
+     <tr>
+     <th>Course:</th>
+     <td>
+          <select>
+               
+               <option value="0">-List of Course-</option>
+               <option value="DCS" >Diploma In Computer Science</option>
+               <optgroup label="Diploma In Computer Science">
+               <option value="DCS_S1">Semester 1</option>   
+               <option value="DCS_S2">Semester 2</option> 
+               <option value="DCS_S3">Semester 3</option>
+               <option value="DCS_S4">Semester 4</option> 
+               <option value="DCS_S5">Semester 5</option>
+               <option value="DCS_S6">Semester 6</option>  
+               </optgroup>
+          
+               <option value="DIB">Diploma In Bussiness</option>
+               <option value="DAS">Diploma In Airline Services</option>
+               
+          </select>
+          
+          </td>
+          </tr>
+                
+     </table>
+     <p align="center"><input type=submit value=Submit><input type=reset value=Reset>
+<br>
+<br>
+
+
+</form>
+</center> 
+          
+
+
+        
+
+</body>
+</html>
