@@ -1,0 +1,43 @@
+<html>
+<head>
+     <title>JavaScript</title>
+     <link rel=icon href=sunflower.jpg type=image/jpg>
+     <meta name=viewport content=width=device-width, initial-scale=1.0>
+     <script>  
+          function checknumber() {
+                var getnumber= document.getElementById("insertnumber").value;
+                switch (true){
+                    //score is 90 or greater
+                    case getnumber >=90:
+                         alert("Score =" + getnumber + " ,grade A");
+                         break;
+                    //score is 80 or greater
+                    case getnumber >=80:
+                         alert("Score =" + getnumber + " ,grade B");
+                         break;
+                    //score is 70 or greater
+                    case getnumber >=70:
+                         alert("Score =" + getnumber + " ,grade C");
+                         break;
+                    //score is 60 or greater
+                    case getnumber >=60:
+                         alert("Score =" + getnumber + " ,grade D");
+                         break;
+                    //Anything 59 or  below is falling
+                    default:
+                         alert ("Score =" + getnumber + " ,grade F") 
+                    
+                }
+               
+              }
+              
+         </script> 
+</head>
+<body>
+     <h1>This is example of using Java Script - Switch in Html</h1>
+<form>
+     Insert a number&nbsp;:&nbsp;&nbsp;
+<input type=number name=insertnumber id=insertnumber onchange=checknumber()>
+</form>
+</body>
+</html>

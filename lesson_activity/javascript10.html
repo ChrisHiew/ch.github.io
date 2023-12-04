@@ -1,0 +1,35 @@
+<html>
+<head>
+     <title>JavaScript</title>
+     <link rel=icon href=stitch.jpeg type=image/jpg>
+     <meta name=viewport content=width=device-width, initial-scale=1.0>
+     <script>  
+          function checknumber() {
+                var getnumber= document.getElementById("insertnumber");
+                if(getnumber.value<=0){
+                   alert("Number inserted ("+getnumber.value + ") is less or equal than 0.");
+                }
+         
+              else if ((getnumber.value>0)&& (getnumber.value<=50))
+              {
+                   alert("Number inserted ("+getnumber.value + ") is greater than 0 and less than 50 .");
+              }
+              else
+              {
+                   alert("Number inserted ("+getnumber.value + ") is greater tahn 50.");
+              }
+              }
+              
+         </script> 
+</head>
+<body>
+     
+     <h1> Java Script - if ... else </h1>
+     <!-- thing to do out in html -->
+     <form>
+          Insert a number &nbsp;:&nbsp;&nbsp;&nbsp;
+          <input type=number name=insertnumber id=insertnumber onchange=checknumber() >
+     </form>
+    
+</body>
+</html>
