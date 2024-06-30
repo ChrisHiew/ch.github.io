@@ -128,7 +128,7 @@ function draw() {
   displayfroglives();
 
     fill('#000056');
-    rect(0, height - grid * 13, width, grid * 5); //Cover the background of the area where the log is located
+    rect(0, height - grid * 8, width, grid * 1); //Cover the background of the area where the log is located
   
   for (let car of cars) {
     car.update();
